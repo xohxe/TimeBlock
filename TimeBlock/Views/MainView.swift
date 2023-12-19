@@ -16,7 +16,7 @@ struct MainView: View {
                 OnboardingView(viewRouter: viewRouter)
             }
             else if viewRouter.currentPage == "page2" {
-                ToDoView()
+                TabBarView()
             }
         }
     }
