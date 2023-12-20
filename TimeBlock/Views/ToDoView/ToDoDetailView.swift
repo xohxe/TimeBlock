@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct ToDoDetailView:View {
-    @Binding var title : String 
+    @Binding var title : String
+    //@Binding var day: Date
+    
     var body: some View {
         VStack{
             Text(title)
@@ -54,11 +58,40 @@ struct ToDoDetailView:View {
                 Text("메모")
                 
             }
+            HStack{
+                Image(systemName: "list.clipboard")
+                    .symbolVariant(.circle.fill)
+                    .font(.system(size: 24,weight:.bold,design: .rounded))
+                    .foregroundStyle(.yellow)
+                Text("날짜 바꾸기")
+                
+            }.onTapGesture {
+                print("change!")
+            }
+         
+            HStack{
+                Image(systemName: "list.clipboard")
+                    .symbolVariant(.circle.fill)
+                    .font(.system(size: 24,weight:.bold,design: .rounded))
+                    .foregroundStyle(.yellow)
+                Text("내일로")
+                
+            }.onTapGesture {
+                print("change!")
+                
+                
+                
+                
+            }
          
             
             
         }
         .padding()
                 
+    }
+    
+    func changeDay(){
+        
     }
 }
