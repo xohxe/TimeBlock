@@ -9,16 +9,22 @@ import Foundation
 import SwiftData
 
 @Model
-class ToDo: Identifiable {
-    var id = UUID()
+final class ToDo: Identifiable {
+//    var id = UUID()
+    @Attribute(.unique)
     var title: String
     var category: String
     var completed: Bool
     var day: Date
     var editMode: Bool
     
+    @Attribute(.externalStorage)
+    var tags: Tag?
+    // 태그는 할일에 한개만 등록
     
-    init(title: String = "", category: String = "", completed: Bool = false, day: Date = .now, editMode: Bool = false) {
+    
+    init(title: String = "", category: String = "", 
+         completed: Bool = false, day: Date = .now, editMode: Bool = false) {
         self.title = title
         self.category = category
         self.completed = completed
