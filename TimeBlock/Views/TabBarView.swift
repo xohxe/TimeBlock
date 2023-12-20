@@ -23,7 +23,7 @@ struct TabBarView: View {
         NavigationView{
             TabView(selection: $tabViewSelection){
                 NavigationView{
-                    
+                    CalendarView()
                 }.tag(0)
                 .tabItem {
                     Image(systemName: "calendar")
@@ -44,7 +44,21 @@ struct TabBarView: View {
                     Text("할일")
                 }
  
-
+                NavigationView{
+                    TagListView()
+                    //                NavigationLink{
+                    //                    TagListView()
+                    //                   // TagListView()
+                    //                } label: {
+                    //                    Text("hi")
+                    //                }
+                }.tag(3)
+                .tabItem {
+                    Image(systemName: "gear")
+                        .resizable()
+                    Text("설정")
+                }
+                
             }
         }
     }
