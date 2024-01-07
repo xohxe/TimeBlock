@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    
+    @StateObject var viewRouter: ViewRouter = .init()
     
     var body: some View {
-        VStack{
-            if viewRouter.currentPage == "page1" {
+        VStack {
+            
+            if viewRouter.currentPage == "page0" {
                 OnboardingView(viewRouter: viewRouter)
             }
-            else if viewRouter.currentPage == "page2" {
+            else if viewRouter.currentPage == "page1" {
                 TabBarView()
             }
+           
         }
     }
 }

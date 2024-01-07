@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import PromiseKit
-import CoreLocation
 
 struct CalendarView:View {
     

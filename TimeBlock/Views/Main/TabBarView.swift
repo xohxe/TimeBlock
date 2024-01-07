@@ -14,7 +14,6 @@ struct TabBarView: View {
     @State private var showingPopover = false
     @State public var tabViewSelection = 1
     
-    
     @State private var path = [ToDo]()
     @State private var sortOrder = SortDescriptor(\ToDo.category)
     @State private var searchText = ""
@@ -46,12 +45,7 @@ struct TabBarView: View {
  
                 NavigationView{
                     TagListView()
-                    //                NavigationLink{
-                    //                    TagListView()
-                    //                   // TagListView()
-                    //                } label: {
-                    //                    Text("hi")
-                    //                }
+                    
                 }.tag(3)
                 .tabItem {
                     Image(systemName: "gear")

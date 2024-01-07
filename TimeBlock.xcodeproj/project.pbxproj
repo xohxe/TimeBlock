@@ -110,6 +110,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01030A242B4AEDB20068C7FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01D7AD312B2EF4080097410D /* HowToUseViewModel.swift */,
+				01030A262B4AEE060068C7FA /* ToDo */,
+				01030A252B4AEDF30068C7FA /* Calendar */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01030A252B4AEDF30068C7FA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				01D7AD982B33025B0097410D /* CalendarModule.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		01030A262B4AEE060068C7FA /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		01030A272B4AEE240068C7FA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				01D7AD3A2B2F0BEB0097410D /* MainView.swift */,
+				01D7AD342B2F01D40097410D /* TabBarView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		019CA2CD2AF4BF89004598D9 = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +169,10 @@
 			children = (
 				01D7AD292B2ED91B0097410D /* Info.plist */,
 				01D7AD0E2B2C94B20097410D /* Resource */,
-				01D7AD0D2B2C94860097410D /* Docs */,
 				01D7AD0C2B2C94160097410D /* Source */,
-				01D7AD252B2CA5080097410D /* Component */,
-				01D7AD0B2B2C93270097410D /* Views */,
 				01CACF8A2B0B61E3008EBC42 /* Models */,
+				01030A242B4AEDB20068C7FA /* ViewModel */,
+				01D7AD0B2B2C93270097410D /* Views */,
 				019CA2D92AF4BF89004598D9 /* TimeBlockApp.swift */,
 				01D7AD382B2F09650097410D /* SceneDelegate.swift */,
 				019CA2DD2AF4BF8B004598D9 /* Assets.xcassets */,
@@ -170,11 +203,11 @@
 		01D7AD0B2B2C93270097410D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				01D7AD842B3180360097410D /* CalendarView */,
-				01D7AD332B2F01670097410D /* ToDoView */,
-				01D7AD2E2B2EED160097410D /* OnboardingView */,
-				01D7AD3A2B2F0BEB0097410D /* MainView.swift */,
-				01D7AD342B2F01D40097410D /* TabBarView.swift */,
+				01D7AD252B2CA5080097410D /* Component */,
+				01030A272B4AEE240068C7FA /* Main */,
+				01D7AD842B3180360097410D /* Calendar */,
+				01D7AD332B2F01670097410D /* ToDo */,
+				01D7AD2E2B2EED160097410D /* Onboarding */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,13 +220,6 @@
 				01D7AD362B2F05DA0097410D /* ViewRouter.swift */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		01D7AD0D2B2C94860097410D /* Docs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Docs;
 			sourceTree = "<group>";
 		};
 		01D7AD0E2B2C94B20097410D /* Resource */ = {
@@ -245,32 +271,30 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		01D7AD2E2B2EED160097410D /* OnboardingView */ = {
+		01D7AD2E2B2EED160097410D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				01D7AD312B2EF4080097410D /* HowToUseViewModel.swift */,
 				01CACF032B04DCD9008EBC42 /* OnboardingView.swift */,
 			);
-			path = OnboardingView;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		01D7AD332B2F01670097410D /* ToDoView */ = {
+		01D7AD332B2F01670097410D /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
 				01CACF442B08F40C008EBC42 /* ToDoDetailView.swift */,
 				01CACF0B2B04EFC5008EBC42 /* ToDoListView.swift */,
 				01D7AD8D2B31A0D10097410D /* TagListView.swift */,
 			);
-			path = ToDoView;
+			path = ToDo;
 			sourceTree = "<group>";
 		};
-		01D7AD842B3180360097410D /* CalendarView */ = {
+		01D7AD842B3180360097410D /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				016AD8132AFCD942006A98B9 /* CalendarView.swift */,
-				01D7AD982B33025B0097410D /* CalendarModule.swift */,
 			);
-			path = CalendarView;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		76E276DD76FA62C0A586769F /* Pods */ = {

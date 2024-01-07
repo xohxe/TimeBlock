@@ -11,7 +11,7 @@ struct OnboardingView : View {
     
     @State var currentIndex: Int = 0
     @StateObject var viewModel: HowToUseViewModel = .init()
- 
+    
     @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -37,33 +37,39 @@ struct OnboardingView : View {
                                 .font(.light14)
                             Spacer()
                             
+                            
                             Button {
-                                if currentIndex == 3 {
-                                    self.viewRouter.currentPage = "page2"
+                                //print(currentIndex)
+                                if currentIndex == 2 {
+                                    self.viewRouter.currentPage =  "page1"
                                 } else {
                                     currentIndex = currentIndex + 1
+                                    
                                 }
-                                
                             } label: {
                                 Text("다음으로")
                             }
+                            
+                            
                         }
-                        .padding(.horizontal,30)
-                        .padding(.vertical,70)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 260)
-                        .background(Color.white)
+                            
+                            
+                            .padding(.horizontal,30)
+                            .padding(.vertical,70)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 260)
+                            .background(Color.white)
+                        }
                     }
                 }
             }
-        }
-        .ignoresSafeArea()
-        .tabViewStyle(PageTabViewStyle())
-        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            .ignoresSafeArea()
+            .tabViewStyle(PageTabViewStyle())
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            
        
     }
 }
-
  
 #Preview {
     OnboardingView(viewRouter: ViewRouter())
