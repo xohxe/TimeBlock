@@ -39,12 +39,10 @@ struct OnboardingView : View {
                             
                             
                             Button {
-                                //print(currentIndex)
                                 if currentIndex == 2 {
                                     self.viewRouter.currentPage =  "page1"
                                 } else {
                                     currentIndex = currentIndex + 1
-                                    
                                 }
                             } label: {
                                 Text("다음으로")

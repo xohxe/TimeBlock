@@ -20,7 +20,9 @@ struct TabBarView: View {
     
     var body: some View {
         NavigationView{
+            
             TabView(selection: $tabViewSelection){
+                
                 NavigationView{
                     CalendarView()
                 }.tag(0)
@@ -37,6 +39,7 @@ struct TabBarView: View {
                            // .searchable(text: $searchText)
                     }
                 }.tag(1)
+                
                 .tabItem {
                     Image(systemName: "checkmark.square.fill")
                         .resizable()
@@ -45,8 +48,8 @@ struct TabBarView: View {
  
                 NavigationView{
                     TagListView()
-                    
-                }.tag(3)
+                }.tag(2)
+                
                 .tabItem {
                     Image(systemName: "gear")
                         .resizable()

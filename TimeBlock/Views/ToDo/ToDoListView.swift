@@ -25,11 +25,11 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 
-                DatePicker("start Date",
-                           selection: $date,
-                           displayedComponents: [.date]
-                )
-                .datePickerStyle(.graphical)
+//                DatePicker("start Date",
+//                           selection: $date,
+//                           displayedComponents: [.date]
+//                )
+//                .datePickerStyle(.graphical)
 
                 
                 List{
