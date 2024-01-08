@@ -9,30 +9,22 @@ import SwiftUI
 
 struct CalendarView:View {
     
+    @ObservedObject var viewModel = CalendarViewModel()
+       
     var body: some View {
-        
         NavigationView {
-            VStack{
-                VStack {
-                    Spacer()
-                    CalendarModuleView()
-                    Spacer()
-                }
-                VStack {
-                    Spacer()
-                    Text("Details")
-                    Spacer()
-                }
+            
+            VStack {
+                CalendarHeader(viewModel: viewModel,month: $viewModel.month)
+                CalendarGrid(viewModel: viewModel,month: $viewModel.month, clickedCurrentMonthDates: $viewModel.clickedCurrentMonthDates)
                 Spacer()
-                
             }
         }
-        
-        
     }
-    
-    
+ 
 }
+
+ 
 
 
 
